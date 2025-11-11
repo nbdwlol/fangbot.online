@@ -1,3 +1,23 @@
+.top-banner {
+  width: 100%;
+  background-color: #ff4d4d; /* bright red */
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* push the rest of the page down so header doesn't overlap the banner */
+body {
+  padding-top: 40px; /* adjust based on banner height */
+}
+
 .header-title {
   display: flex;
   align-items: center;
