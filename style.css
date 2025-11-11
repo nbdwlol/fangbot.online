@@ -1,134 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-* {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #0d1117;
-  color: #e6edf3;
-  line-height: 1.6;
 }
 
 header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #161b22;
-  border-bottom: 1px solid #30363d;
+  padding: 30px 0;
 }
 
-header h1 {
-  font-size: 2.2rem;
-  text-transform: lowercase;
+h1 {
+  font-size: 2.5em;
+  margin: 0;
 }
 
-header p {
-  color: #8b949e;
+p {
+  margin-top: 5px;
+  color: #ccc;
+}
+
+.invite-btn {
+  display: inline-block;
+  background-color: #5865F2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.invite-btn:hover {
+  background-color: #4752C4;
 }
 
 .status {
-  margin-top: 1rem;
-  font-weight: 600;
-  padding: 0.4rem 1rem;
-  border-radius: 8px;
-  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .status.online {
-  background: #238636;
+  color: #43B581;
 }
 
 .status.offline {
-  background: #da3633;
+  color: #F04747;
 }
 
-main {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.commands {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
 }
 
-section {
-  margin-bottom: 2rem;
-}
-
-section h2 {
-  margin-bottom: 0.8rem;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 0.3rem;
-}
-
-/* Smooth collapsibles */
 .collapsible {
-  background: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
-  overflow: hidden;
+  margin: 10px 0;
 }
 
 .collapsible-btn {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  color: #e6edf3;
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
+  background-color: #1f1f1f;
+  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
 }
 
 .collapsible-btn:hover {
-  background: #21262d;
+  background-color: #2a2a2a;
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  background: #0d1117;
-  transition: max-height 0.35s ease-out, padding 0.3s ease-out;
+  background-color: #141414;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 0 15px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 .collapsible-content.open {
-  padding: 0.8rem 1rem;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 0.3rem 0;
-  color: #c9d1d9;
-}
-
-.invite-btn {
-  display: inline-block;
-  background: #238636;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background 0.2s;
-}
-
-.invite-btn:hover {
-  background: #2ea043;
+  padding: 15px;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #8b949e;
-  border-top: 1px solid #30363d;
-  background: #161b22;
+  margin: 40px 0 20px;
+  color: #888;
 }
