@@ -1,5 +1,5 @@
 /* -------------------------------
-   General Styles
+   General Layout
 --------------------------------- */
 html, body {
   height: 100%;
@@ -11,9 +11,21 @@ html, body {
   flex-direction: column;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+main {
+  flex: 1 0 auto; /* grow to fill space between header and footer */
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 0 15px;
+}
+
+footer {
+  flex-shrink: 0; /* stay at bottom */
+  text-align: center;
+  padding: 12px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  color: #aaa;
+  font-size: 0.85rem;
 }
 
 /* -------------------------------
@@ -46,23 +58,6 @@ header p {
 }
 
 /* -------------------------------
-   Main Content
---------------------------------- */
-main {
-  max-width: 900px;
-  margin: 15px auto;
-  padding: 0 15px;
-  flex: 1 0 auto; /* allows sticky footer */
-}
-
-section h2 {
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
-  margin-bottom: 12px;
-  font-size: 1.2rem;
-}
-
-/* -------------------------------
    About Section & Buttons
 --------------------------------- */
 .about {
@@ -86,6 +81,7 @@ section h2 {
   font-size: 0.9rem;
   display: inline-block;
   transition: opacity 0.3s;
+  text-align: center;
 }
 
 .support-btn {
@@ -142,16 +138,13 @@ section h2 {
 }
 
 /* -------------------------------
-   Footer
+   Section Titles
 --------------------------------- */
-footer {
-  text-align: center;
-  padding: 12px;
-  background-color: #1e1e1e;
-  border-top: 1px solid #333;
-  color: #aaa;
-  font-size: 0.85rem;
-  flex-shrink: 0;
+section h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
 /* -------------------------------
