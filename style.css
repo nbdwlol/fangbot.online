@@ -24,21 +24,38 @@ h1, h2 {
 
 .top-banner {
   width: 100%;
-  background-color: #590000; /* dark red */
+  background-color: #ff4d4d; /* bright red */
   color: white;
   text-align: center;
   font-weight: bold;
-  padding: 8px 0;
+  padding: 8px 20px;
   font-size: 14px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-body {
-  padding-top: 40px; /* leave space for banner */
+.top-banner.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.close-banner {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  margin-left: 10px;
 }
 
 /* ===============================
@@ -69,26 +86,29 @@ header p {
 }
 
 /* ===============================
-   BUTTONS FIXED
+   BUTTONS
 =============================== */
 
 .buttons {
   display: flex;
   justify-content: center; /* center horizontally */
-  gap: 10px; /* spacing between buttons */
-  flex-wrap: wrap; /* wrap on small screens */
+  gap: 10px;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
 .invite-btn, .support-btn {
   display: inline-block;
   text-align: center;
-  background-color: #5865F2; /* Discord blue */
-  color: white;
   padding: 10px 16px;
   border-radius: 6px;
   font-weight: bold;
+  color: white;
   transition: background-color 0.2s;
+}
+
+.invite-btn {
+  background-color: #5865F2; /* Discord blue */
 }
 
 .support-btn {
