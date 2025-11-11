@@ -1,20 +1,17 @@
-/* ========== GENERAL ========== */
+/* style.css - dark theme */
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #0d0d0d; /* very dark */
-  color: #eee;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* dark gray */
+  color: #e0e0e0;
 }
 
-h1, h2 {
-  margin: 0;
-}
-
-/* ========== HEADER ========== */
 header {
   text-align: center;
-  margin: 20px 0;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
 }
 
 .header-title {
@@ -25,107 +22,102 @@ header {
 }
 
 .bot-icon-small {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 header p {
   margin-top: 5px;
-  color: #bbb;
+  color: #aaa;
 }
 
-/* ========== BUTTONS ========== */
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.about {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 15px;
   margin-top: 15px;
 }
 
 .invite-btn, .support-btn {
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: all 0.2s;
+  background-color: #5865f2;
   color: #fff;
-}
-
-.invite-btn {
-  background-color: #5865F2;
-}
-
-.invite-btn:hover {
-  background-color: #4752c4;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
 .support-btn {
-  background-color: #7289DA;
+  background-color: #7289da;
 }
 
-.support-btn:hover {
-  background-color: #5b6eae;
+.invite-btn:hover, .support-btn:hover {
+  opacity: 0.8;
 }
 
-/* ========== SECTIONS ========== */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px;
+section h2 {
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-section.about p {
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* ========== COLLAPSIBLES ========== */
 .collapsible {
-  margin: 15px 0;
-  border: 1px solid #333;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #1a1a1a;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
 }
 
 .collapsible-btn {
   width: 100%;
-  padding: 14px 20px;
-  background-color: #2a2a2a;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
   border: none;
-  outline: none;
-  color: #fff;
-  font-size: 16px;
   text-align: left;
+  padding: 12px 20px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
 .collapsible-btn:hover {
-  background-color: #3a3a3a;
+  background-color: #333;
 }
 
 .collapsible-content {
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  background-color: #1a1a1a;
+  border-radius: 5px;
   padding: 0 20px;
 }
 
 .collapsible-content ul {
-  margin: 10px 0;
-  padding-left: 20px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
 }
 
 .collapsible-content li {
-  margin: 6px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #333;
 }
 
-/* ========== FOOTER ========== */
 footer {
   text-align: center;
-  margin: 30px 0;
-  color: #888;
+  padding: 15px;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  color: #aaa;
 }
