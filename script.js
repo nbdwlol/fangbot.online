@@ -1,17 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const closeBtn = document.getElementById('close-banner');
-  const banner = document.getElementById('top-banner');
+document.addEventListener("DOMContentLoaded", () => {
+  const collapsibles = document.querySelectorAll(".collapsible-btn");
 
-  if (closeBtn && banner) {
-    closeBtn.addEventListener('click', () => {
-      banner.classList.add('hide'); // add hide class to smoothly slide up
-    });
-  }
-
-  // COLLAPSIBLE SECTION CODE (smooth open/close)
-  const collapsibles = document.querySelectorAll('.collapsible-btn');
   collapsibles.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+
       const content = btn.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
