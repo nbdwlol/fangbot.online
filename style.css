@@ -1,0 +1,66 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2f3136;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: #36393f;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.2rem 0;
+    text-transform: lowercase;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b9bbbe;
+}
+
+.invite-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #5865f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.commands {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.command-category {
+    margin-bottom: 2rem;
+}
+
+.command-category h3 {
+    color: #00b0f4;
+    text-transform: lowercase;
+}
+
+.command-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.command-category li {
+    padding: 0.3rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #36393f;
+    color: #b9bbbe;
+}
