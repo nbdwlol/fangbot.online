@@ -1,17 +1,18 @@
 /* ===============================
-   GENERAL STYLES
+   GENERAL STYLES - DARK BACKGROUND
 =============================== */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f7;
-  color: #333;
+  background-color: #1e1e1e; /* really dark gray */
+  color: #f0f0f0; /* light text for contrast */
 }
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 h1, h2 {
@@ -19,112 +20,7 @@ h1, h2 {
 }
 
 /* ===============================
-   TOP BANNER
-=============================== */
-
-.top-banner {
-  width: 100%;
-  background-color: #ff4d4d; /* bright red */
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  padding: 8px 20px;
-  font-size: 14px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.top-banner.hide {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.close-banner {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 0;
-  margin-left: 10px;
-}
-
-/* ===============================
-   HEADER
-=============================== */
-
-header {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.header-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.bot-icon-small {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-header p {
-  margin-top: 5px;
-  color: #555;
-}
-
-/* ===============================
-   BUTTONS
-=============================== */
-
-.buttons {
-  display: flex;
-  justify-content: center; /* center horizontally */
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-.invite-btn, .support-btn {
-  display: inline-block;
-  text-align: center;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  transition: background-color 0.2s;
-}
-
-.invite-btn {
-  background-color: #5865F2; /* Discord blue */
-}
-
-.support-btn {
-  background-color: #2C2F33; /* dark Discord color */
-}
-
-.invite-btn:hover {
-  background-color: #4752c4;
-}
-
-.support-btn:hover {
-  background-color: #23272a;
-}
-
-/* ===============================
-   SECTIONS
+   SECTIONS - CARD BACKGROUND
 =============================== */
 
 section {
@@ -133,85 +29,69 @@ section {
   padding: 0 20px;
 }
 
-section.about p {
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* ===============================
-   COLLAPSIBLE
-=============================== */
-
 .collapsible {
   margin: 15px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #333; /* dark border */
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background-color: #2a2a2a; /* slightly lighter than body */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 .collapsible-btn {
-  width: 100%;
-  padding: 12px 20px;
-  background-color: #eee;
-  border: none;
-  text-align: left;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s;
+  background-color: #333; /* dark header for collapsible */
+  color: #f0f0f0;
 }
 
 .collapsible-btn:hover {
-  background-color: #ddd;
+  background-color: #444;
 }
 
 .collapsible-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 20px;
-}
-
-.collapsible-content ul {
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
+  background-color: #2a2a2a;
 }
 
 .collapsible-content li {
-  padding: 6px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.collapsible-content li:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #444;
 }
 
 /* ===============================
-   FOOTER
+   HEADER & FOOTER
 =============================== */
+
+header {
+  text-align: center;
+  margin: 20px 0;
+  color: #f0f0f0;
+}
 
 footer {
   text-align: center;
   margin: 40px 0;
-  color: #777;
+  color: #aaa;
   font-size: 14px;
 }
 
 /* ===============================
-   RESPONSIVE
+   BUTTONS
 =============================== */
 
-@media (max-width: 600px) {
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+.invite-btn, .support-btn {
+  color: #fff;
+}
 
-  .collapsible-btn {
-    font-size: 14px;
-    padding: 10px 15px;
-  }
+.invite-btn {
+  background-color: #5865F2;
+}
+
+.invite-btn:hover {
+  background-color: #4752c4;
+}
+
+.support-btn {
+  background-color: #7289da;
+}
+
+.support-btn:hover {
+  background-color: #5b6eae;
 }
