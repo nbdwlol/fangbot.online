@@ -1,15 +1,15 @@
-/* style.css - dark theme */
+/* style.css - responsive dark theme */
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #121212; /* dark gray */
+  background-color: #121212;
   color: #e0e0e0;
 }
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 15px 10px;
   background-color: #1e1e1e;
   border-bottom: 1px solid #333;
 }
@@ -22,41 +22,45 @@ header {
 }
 
 .bot-icon-small {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
 }
 
 header p {
   margin-top: 5px;
   color: #aaa;
+  font-size: 0.9rem;
 }
 
 main {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 15px auto;
   padding: 0 15px;
 }
 
 .about {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 .invite-btn, .support-btn {
   background-color: #5865f2;
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: opacity 0.3s;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 .support-btn {
@@ -70,11 +74,12 @@ main {
 section h2 {
   border-bottom: 1px solid #444;
   padding-bottom: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
 .collapsible {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .collapsible-btn {
@@ -83,10 +88,10 @@ section h2 {
   color: #e0e0e0;
   border: none;
   text-align: left;
-  padding: 12px 20px;
+  padding: 12px 16px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1rem;
   transition: background 0.3s;
 }
 
@@ -100,7 +105,7 @@ section h2 {
   transition: max-height 0.4s ease;
   background-color: #1a1a1a;
   border-radius: 5px;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .collapsible-content ul {
@@ -110,14 +115,40 @@ section h2 {
 }
 
 .collapsible-content li {
-  padding: 5px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #333;
+  font-size: 0.95rem;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 12px;
   background-color: #1e1e1e;
   border-top: 1px solid #333;
   color: #aaa;
+  font-size: 0.85rem;
+}
+
+/* responsive adjustments */
+@media (max-width: 480px) {
+  .header-title {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .collapsible-btn {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .collapsible-content {
+    padding: 0 12px;
+  }
+
+  .invite-btn, .support-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
 }
