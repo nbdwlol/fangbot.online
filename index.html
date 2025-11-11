@@ -9,52 +9,49 @@
 </head>
 <body>
   <header>
-    <h1>my discord bot</h1>
-    <p>moderation • utility • ai embed builder</p>
+    <h1>fang</h1>
+    <p>moderation • utility</p>
     <div id="status" class="status offline">status: checking...</div>
   </header>
 
   <main>
     <section class="about">
       <h2>about</h2>
-      <p>this is a multipurpose discord bot with moderation, utility, and custom embeds — built with discord.py.</p>
+      <p>fang is a multipurpose discord bot with moderation and utility commands.</p>
       <a href="https://discord.com/api/oauth2/authorize?client_id=1436480231224512656&permissions=8&scope=bot%20applications.commands" target="_blank" class="invite-btn">invite bot</a>
     </section>
 
     <section class="commands">
       <h2>commands</h2>
 
-      <details>
-        <summary>utility commands ⚙️</summary>
-        <ul>
-          <li><b>/ping</b> — check bot latency</li>
-          <li><b>/userinfo</b> — view user info</li>
-          <li><b>/serverinfo</b> — view server info</li>
-          <li><b>/avatar</b> — view user avatar</li>
-        </ul>
-      </details>
+      <div class="collapsible">
+        <button class="collapsible-btn">utility commands ⚙️</button>
+        <div class="collapsible-content">
+          <ul>
+            <li><b>/ping</b> — check bot latency</li>
+            <li><b>/userinfo</b> — view user info</li>
+            <li><b>/serverinfo</b> — view server info</li>
+            <li><b>/avatar</b> — view user avatar</li>
+            <li><b>/embedbuilder</b> — create custom embeds with title, description, color, and image.</li>
+          </ul>
+        </div>
+      </div>
 
-      <details>
-        <summary>moderation commands 🔨</summary>
-        <ul>
-          <li><b>/kick</b> — kick a user</li>
-          <li><b>/ban</b> — ban a user</li>
-          <li><b>/unban</b> — unban by user id</li>
-          <li><b>/mute</b> — mute a user</li>
-          <li><b>/unmute</b> — unmute a user</li>
-          <li><b>/warn</b> — warn a user</li>
-          <li><b>/warnings</b> — view user warnings</li>
-          <li><b>/clear</b> — delete messages</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>embed builder 🧩</summary>
-        <ul>
-          <li><b>/embedbuilder</b> — create custom embeds with title, description, color, and image.</li>
-        </ul>
-      </details>
-    </section>
+      <div class="collapsible">
+        <button class="collapsible-btn">moderation commands 🔨</button>
+        <div class="collapsible-content">
+          <ul>
+            <li><b>/kick</b> — kick a user</li>
+            <li><b>/ban</b> — ban a user</li>
+            <li><b>/unban</b> — unban by user id</li>
+            <li><b>/mute</b> — mute a user</li>
+            <li><b>/unmute</b> — unmute a user</li>
+            <li><b>/warn</b> — warn a user</li>
+            <li><b>/warnings</b> — view user warnings</li>
+            <li><b>/clear</b> — delete messages</li>
+          </ul>
+        </div>
+      </div>
       
   <footer>
     <p>made by clinicianz on discord</p>
