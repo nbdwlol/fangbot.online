@@ -188,18 +188,21 @@ footer .social-links {
 }
 
 footer .social-links a {
-  display: inline-block;
-  margin: 0 6px;
+  display: inline-block;   /* ensures icon uses width/height */
+  margin: 0 8px;
   transition: opacity 0.3s;
 }
+
 
 footer .social-links a:hover {
   opacity: 0.7;
 }
 
 footer .social-links img {
-  width: 20px;   /* smaller width */
-  height: 20px;  /* smaller height */
-  object-fit: contain;
-  filter: invert(90%); /* white on dark background */
+  display: inline-block;   /* ensures proper sizing */
+  width: 20px;             /* fixed width */
+  height: 20px;            /* fixed height */
+  object-fit: contain;     /* keeps aspect ratio */
+  vertical-align: middle;  /* aligns with text */
+  filter: invert(90%);     /* makes it white on dark background */
 }
