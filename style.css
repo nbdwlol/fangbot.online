@@ -198,8 +198,8 @@ footer .social-links a:hover {
 }
 
 footer .social-links img {
-  width: 24px;
-  height: 24px;
-  filter: invert(90%); /* makes icons white on dark background */
+  width: 20px;   /* smaller width */
+  height: 20px;  /* smaller height */
+  object-fit: contain;
+  filter: invert(90%); /* white on dark background */
 }
-
