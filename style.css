@@ -73,6 +73,35 @@ main {
   background-color: #4752c4;
 }
 
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.invite-btn, .support-btn {
+  background-color: #5865F2; /* Discord blue */
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.support-btn {
+  background-color: #2C2F33; /* darker Discord color */
+}
+
+.invite-btn:hover {
+  background-color: #4752c4;
+}
+
+.support-btn:hover {
+  background-color: #23272a;
+}
+
 .commands {
   max-width: 600px;
   margin: 0 auto;
