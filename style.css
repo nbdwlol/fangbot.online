@@ -1,119 +1,206 @@
-/* ===============================
-   GENERAL - DARK THEME
-=============================== */
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==============================
+   GENERAL RESET & BODY
+============================== */
+* {
   margin: 0;
   padding: 0;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-h1, h2 {
-  margin: 0;
-}
-
-/* ===============================
+/* ==============================
    HEADER
-=============================== */
-
+============================== */
 header {
   text-align: center;
-  margin: 20px 0;
+  padding: 2rem 1rem 1rem;
 }
 
-.header-title {
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-}
-
-.bot-icon-small {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  gap: 0.6rem;
 }
 
 header p {
-  margin-top: 5px;
+  font-size: 1rem;
   color: #aaa;
 }
 
-/* ===============================
-   BUTTONS
-=============================== */
+header .bot-icon-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 15px;
 }
 
-.invite-btn, .support-btn {
+.buttons a {
   display: inline-block;
-  text-align: center;
-  padding: 10px 16px;
+  padding: 0.7rem 1.6rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  transition: background-color 0.2s;
+  box-shadow: 0 0 6px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
 }
 
-.invite-btn {
-  background-color: #5865F2;
+.buttons a:hover {
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
+  transform: translateY(-2px);
 }
 
-.invite-btn:hover {
-  background-color: #4752c4;
+/* ---------- COMMANDS SECTION ---------- */
+.commands h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
 }
 
-.support-btn {
-  background-color: #7289da;
-}
-
-.support-btn:hover {
-  background-color: #5b6eae;
-}
-
-/* ===============================
-   SECTIONS
-=============================== */
-
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-section.about p {
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-/* ===============================
-   COLLAPSIBLE
-=============================== */
-
+/* ---------- COLLAPSIBLES ---------- */
 .collapsible {
-  margin: 15px 0;
-  border: 1px solid #333;
-  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
   overflow: hidden;
-  background-color: #2a2a2a;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  border: 1px solid #333;
 }
 
 .collapsible-btn {
   width: 100%;
-  padding: 12px 20px;
-  background-color: #333;
-  border: none
+  background-color: #1f1f1f;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-btn:hover {
+  background-color: #292929;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: #1a1a1a;
+  padding: 0 1rem;
+}
+
+.collapsible-content ul {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.collapsible-content ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background-color: #1f1f1f;
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .socials a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .socials a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) invert(1);
+}
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .collapsible-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  footer .socials a img {
+    width: 20px;
+    height: 20px;
+  }
+}
