@@ -1,17 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const collapsibles = document.querySelectorAll('.collapsible-btn');
+document.addEventListener("DOMContentLoaded", () => {
+  const collapsibles = document.querySelectorAll(".collapsible-btn");
 
-  collapsibles.forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling;
+  collapsibles.forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
 
-      button.classList.toggle('active');
+      const content = btn.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
-        content.style.padding = '0 1rem';
       } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.padding = '1rem';
+        content.style.maxHeight = content.scrollHeight + "px";
       }
     });
   });
