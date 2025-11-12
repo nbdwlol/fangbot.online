@@ -1,6 +1,6 @@
-/* ==============================
+/* =======================
    GENERAL RESET & BODY
-============================== */
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,64 +12,54 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   line-height: 1.6;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
-/* ==============================
+/* =======================
    HEADER
-============================== */
+======================= */
 header {
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem;
 }
 
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.2rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-header p {
-  font-size: 1rem;
-  color: #aaa;
+  gap: 0.5rem;
 }
 
 header .bot-icon-small {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-/* ==============================
+header p {
+  margin-top: 0.5rem;
+  color: #cccccc;
+}
+
+/* =======================
    MAIN CONTENT
-============================== */
+======================= */
 main {
   flex: 1;
-  width: 90%;
+  padding: 0 1rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 2rem;
 }
 
-/* ---------- ABOUT SECTION ---------- */
+/* ABOUT SECTION */
 .about {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.about h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
 .about p {
-  margin-bottom: 1rem;
-  color: #ccc;
+  margin: 1rem 0;
 }
 
 .buttons {
@@ -80,127 +70,114 @@ main {
 }
 
 .buttons a {
-  display: inline-block;
-  padding: 0.7rem 1.6rem;
   background-color: #1f1f1f;
-  color: #fff;
-  text-decoration: none;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
   border-radius: 6px;
-  box-shadow: 0 0 6px rgba(255,255,255,0.05);
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .buttons a:hover {
-  box-shadow: 0 0 12px rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
 }
 
-/* ---------- COMMANDS SECTION ---------- */
-.commands h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-}
-
-/* ---------- COLLAPSIBLES ---------- */
+/* =======================
+   COLLAPSIBLES
+======================= */
 .collapsible {
   margin-bottom: 1rem;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #333;
 }
 
 .collapsible-btn {
-  width: 100%;
   background-color: #1f1f1f;
   color: #fff;
   cursor: pointer;
-  padding: 0.8rem 1rem;
-  font-size: 1.1rem;
-  border: none;
+  padding: 0.75rem 1rem;
+  width: 100%;
   text-align: left;
+  border: none;
   outline: none;
-  transition: all 0.3s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .collapsible-btn:hover {
-  background-color: #292929;
-  box-shadow: 0 0 8px rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  background-color: #1a1a1a;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   padding: 0 1rem;
 }
 
 .collapsible-content ul {
   list-style: none;
-  padding: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
-.collapsible-content ul li {
-  padding: 0.4rem 0;
-  border-bottom: 1px solid #333;
+.collapsible-content li {
+  padding: 0.25rem 0;
 }
 
-/* ==============================
+/* =======================
    FOOTER
-============================== */
+======================= */
 footer {
   background-color: #1f1f1f;
-  padding: 1rem 0;
+  padding: 1.5rem 1rem;
   text-align: center;
-  position: sticky;
-  bottom: 0;
-  width: 100%;
 }
 
 footer p {
+  color: #cccccc;
   margin-bottom: 0.5rem;
-  color: #aaa;
   font-size: 0.9rem;
 }
 
-/* ---------- SOCIAL ICONS ---------- */
-footer .socials {
+/* =======================
+   SOCIAL ICONS
+======================= */
+.socials {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-footer .socials a img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(1) invert(1);
-  transition: transform 0.3s ease, filter 0.3s ease;
+.socials a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
 }
 
-footer .socials a img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2) invert(1);
+.socials a img:hover {
+  transform: scale(1.1);
 }
 
-/* ==============================
-   MEDIA QUERIES
-============================== */
-@media screen and (max-width: 600px) {
+.socials a.discord img {
+  filter: none; /* original Discord color */
+}
+
+.socials a.twitter img {
+  filter: none; /* original Twitter color */
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
   }
 
-  .collapsible-btn {
-    font-size: 1rem;
-    padding: 0.7rem 1rem;
-  }
-
-  footer .socials a img {
-    width: 20px;
-    height: 20px;
+  .buttons a {
+    width: 100%;
+    text-align: center;
   }
 }
