@@ -1,26 +1,21 @@
-/* === Global Styles === */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  background-color: #121212; /* dark theme */
-  color: #e0e0e0;
-  line-height: 1.6;
-  min-height: 100vh;
+  background-color: #111;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-/* === Header === */
 header {
   text-align: center;
-  padding: 40px 20px 20px;
-  background-color: #181818;
-  border-bottom: 1px solid #2c2c2c;
+  padding: 2rem 1rem;
 }
 
 .header-title {
@@ -34,172 +29,117 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
-header p {
-  color: #b5b5b5;
-  margin-top: 5px;
-  font-size: 1rem;
-}
-
-/* === Main === */
 main {
   flex: 1;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* === About Section === */
-.about h2 {
+h2 {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .about p {
   text-align: center;
-  color: #cfcfcf;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  color: #ccc;
 }
 
-/* === Buttons === */
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin: 20px 0;
+  gap: 1rem;
 }
 
-a.invite-btn,
-a.support-btn {
-  background-color: #5865f2;
+a {
+  text-decoration: none;
+}
+
+.invite-btn, .support-btn {
+  background: #222;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none; /* removes underline */
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid #333;
 }
 
-a.support-btn {
-  background-color: #f04747;
+.invite-btn:hover, .support-btn:hover {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
 }
 
-a.invite-btn:hover,
-a.support-btn:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* === Commands Section === */
-.commands h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin: 40px 0 20px;
-  color: #ffffff;
-}
-
-/* === Collapsibles === */
 .collapsible {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .collapsible-btn {
-  background-color: #222;
+  background: #222;
   color: #fff;
-  cursor: pointer;
-  padding: 14px 20px;
+  padding: 1rem;
   width: 100%;
   text-align: left;
   border: none;
-  outline: none;
-  font-size: 1.1rem;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .collapsible-btn:hover {
-  background-color: #333;
+  box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.2);
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
-  background-color: #1a1a1a;
+  background: #1a1a1a;
   border-radius: 0 0 8px 8px;
-  padding: 0 20px;
-}
-
-.collapsible-content.open {
-  padding: 15px 20px;
-  max-height: 400px;
+  margin-top: 5px;
+  padding: 0 1rem;
 }
 
 .collapsible-content ul {
   list-style: none;
+  padding: 1rem 0;
 }
 
 .collapsible-content li {
-  padding: 8px 0;
-  border-bottom: 1px solid #2b2b2b;
+  margin: 0.5rem 0;
+  color: #ccc;
 }
 
-.collapsible-content li:last-child {
-  border-bottom: none;
-}
-
-/* === Footer === */
 footer {
-  background-color: #181818;
-  color: #999;
+  background: #0a0a0a;
+  padding: 1rem;
   text-align: center;
-  padding: 15px;
-  border-top: 1px solid #2c2c2c;
+  color: #888;
   position: sticky;
   bottom: 0;
   width: 100%;
 }
 
-footer p {
-  margin-bottom: 10px;
+.socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* === Social Icons === */
-<footer>
-  <p>made by clinicianz on discord</p>
-    <a href="https://x.com/fangbotonline" target="_blank">
-      <img src="twitter-icon.png" alt="twitter">
-  </div>
-</footer>
+.socials img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s ease;
+}
 
-
-/* === Responsive Design === */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .bot-icon-small {
-    width: 35px;
-    height: 35px;
-  }
-
-  a.invite-btn,
-  a.support-btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .socials a {
-    font-size: 18px;
-  }
+.socials img:hover {
+  filter: brightness(2);
+  transform: scale(1.1);
 }
