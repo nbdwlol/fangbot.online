@@ -48,7 +48,7 @@ header p {
   font-size: 1rem;
 }
 
-/* === About Section === */
+/* === Main === */
 main {
   flex: 1;
   padding: 40px 20px;
@@ -56,6 +56,7 @@ main {
   margin: 0 auto;
 }
 
+/* === About Section === */
 .about h2 {
   text-align: center;
   font-size: 1.8rem;
@@ -106,7 +107,7 @@ a.support-btn:hover {
   color: #ffffff;
 }
 
-/* === Collapsible Buttons === */
+/* === Collapsibles === */
 .collapsible {
   margin-bottom: 10px;
 }
@@ -180,8 +181,9 @@ footer p {
 }
 
 .socials a {
-  color: #fff;
+  color: #fff !important; /* force white icons */
   font-size: 20px;
+  text-decoration: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
