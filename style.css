@@ -1,50 +1,73 @@
+/* ==============================
+   GENERAL RESET & BODY
+============================== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* ==============================
+   HEADER
+============================== */
 header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem;
 }
 
-.header-title {
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0.6rem;
 }
 
-.bot-icon-small {
+header p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+header .bot-icon-small {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
+/* ==============================
+   MAIN CONTENT
+============================== */
 main {
   flex: 1;
   width: 90%;
-  max-width: 700px;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
-h2 {
+/* ---------- ABOUT SECTION ---------- */
+.about {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .about p {
-  text-align: center;
   margin-bottom: 1rem;
   color: #ccc;
 }
@@ -53,93 +76,131 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-a {
-  text-decoration: none;
-}
-
-.invite-btn, .support-btn {
-  background: #222;
+.buttons a {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background-color: #1f1f1f;
   color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  box-shadow: 0 0 12px rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ---------- COMMANDS SECTION ---------- */
+.commands h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* ---------- COLLAPSIBLES ---------- */
+.collapsible {
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
   border: 1px solid #333;
 }
 
-.invite-btn:hover, .support-btn:hover {
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
-}
-
-.collapsible {
-  margin-bottom: 1rem;
-}
-
 .collapsible-btn {
-  background: #222;
-  color: #fff;
-  padding: 1rem;
   width: 100%;
-  text-align: left;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background 0.3s, box-shadow 0.3s;
+  background-color: #1f1f1f;
+  color: #fff;
   cursor: pointer;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .collapsible-btn:hover {
-  box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.2);
+  background-color: #292929;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2);
 }
 
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  background: #1a1a1a;
-  border-radius: 0 0 8px 8px;
-  margin-top: 5px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: #1a1a1a;
   padding: 0 1rem;
 }
 
 .collapsible-content ul {
   list-style: none;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
-.collapsible-content li {
-  margin: 0.5rem 0;
-  color: #ccc;
+.collapsible-content ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #333;
 }
 
+/* ==============================
+   FOOTER
+============================== */
 footer {
-  background: #0a0a0a;
-  padding: 1rem;
+  background-color: #1f1f1f;
+  padding: 1rem 0;
   text-align: center;
-  color: #888;
   position: sticky;
   bottom: 0;
   width: 100%;
 }
 
-.socials {
-  margin-top: 10px;
+footer p {
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+footer .socials {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1rem;
 }
 
-.socials img {
-  width: 25px;
-  height: 25px;
-  filter: brightness(0) invert(1);
-  transition: 0.3s ease;
+footer .socials a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.socials img:hover {
-  filter: brightness(2);
-  transform: scale(1.1);
+footer .socials a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) invert(1);
+}
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .collapsible-btn {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  footer .socials a img {
+    width: 20px;
+    height: 20px;
+  }
 }
