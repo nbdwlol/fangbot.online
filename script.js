@@ -1,20 +1,18 @@
-// select all collapsible buttons
-const collapsibleButtons = document.querySelectorAll(".collapsible-btn");
+document.addEventListener('DOMContentLoaded', () => {
+  const collapsibles = document.querySelectorAll('.collapsible-btn');
 
-collapsibleButtons.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    // toggle active state for styling
-    this.classList.toggle("active");
+  collapsibles.forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
 
-    // get the corresponding content
-    const content = this.nextElementSibling;
-
-    if (content.style.maxHeight) {
-      // if already expanded, collapse it
-      content.style.maxHeight = null;
-    } else {
-      // expand smoothly
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+      button.classList.toggle('active');
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        content.style.padding = '0 1rem';
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.padding = '1rem';
+      }
+    });
   });
 });
